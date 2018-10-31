@@ -28,12 +28,12 @@ favicon: http://pheo33nwl.bkt.clouddn.com/avatar.jpeg
 
 # SNS settings
 # 一些社交平台地址，支持以下几种：
-# weibo_username:     3286578617
+# weibo_username: 
 zhihu_username: Knorien
 github_username: KnorienChang
 twitter_username: KenveChang
-# facebook_username:  xiaotao.nie.5
-# linkedin_username:  小涛-聂-80964aba
+# facebook_username: 
+# linkedin_username: 
 
 # Directory
 source_dir: source
@@ -133,20 +133,15 @@ asset_pipeline:
 anchorjs: true # if you want to customize anchor. check out line:181 of `post.html`
 
 # Disqus settings 
-disqus_username: 
-
-# Duoshuo settings
-duoshuo_username:  # 你的多说帐号
-# Share component is depend on Comment so we can NOT use share only.
-duoshuo_share: true                     # set to false if you want to use Comment without Sharing
+# disqus_username: 
 
 # Use livere
-use_livere:
+# use_livere:
 
 # Valine comment system https://valine.js.org
 
 valine: 
-  enable: true
+  enable: false
   appid: 0mRi20M7U7jDvThjXvGzCw6a-gzGzoHsz # Leancloud应用的appId
   appkey: pFeoeR3lEgLtut5Hn2jKLpRG # Leancloud应用的appKey
   verify: true #验证码
