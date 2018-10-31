@@ -2,8 +2,9 @@
 title: 在云服务器上自动部署并更新hexo
 date: 2018-10-30 20:14:36
 layout: post
-author: "Knorien"
-cdn: 'header-off'
+author: Knorien
+cdn: header-on
+header-img: sw1080.png
 tags:
   - 自动部署
   - hexo

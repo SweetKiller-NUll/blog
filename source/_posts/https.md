@@ -2,8 +2,9 @@
 title: 使用Let's Encrypt申请免费的HTTPS证书
 date: 2018-10-31 13:11:48
 layout: post
-author: "Knorien"
-cdn: 'header-off'
+author: Knorien
+cdn: header-on
+header-img: sw1080.png
 tags:
   - https
   - 加密

@@ -102,7 +102,7 @@ deploy:
 ############### 主题设置
 
 # Build settings
-anchorjs: false # if you want to customize anchor. check out line:181 of `post.html`
+anchorjs: true # if you want to customize anchor. check out line:181 of `post.html`
 
 # Disqus settings 
 disqus_username: 
@@ -169,7 +169,9 @@ clip-home-post-bg: "?imageView2/1/w/800/h/300/interlace/1/q/70"
 
 # post default images
 post-default-img: http://pheo33nwl.bkt.clouddn.com/sw1080.png?imageView2/4/w/1400/h/400/interlace/1/q/90 # 博文默认的图片
-post-default-img-mobile: sw1080.png # 移动端显示的图片
+post-default-img-mobile: http://pheo33nwl.bkt.clouddn.com/sw1080.png?imageView2/4/w/750/h/600/interlace/1/q/90 # 移动端显示的图片
+
+header-img: http://pheo33nwl.bkt.clouddn.com/sw1080.png?imageView2/4/w/750/h/490/interlace/1/q/90 
 
 # Sidebar settings
 sidebar: true
@@ -177,7 +179,7 @@ sidebar-about-description: 时光未央，岁月静好 # 个人描述
 sidebar-avatar: "http://pheo33nwl.bkt.clouddn.com/avatar.jpeg?imageView2/2/w/300/h/300/interlace/1/q/90"   # use absolute URL
 
 # search api , set your custom key
-swiftype_key: 
+# swiftype_key: 
 
 # archive page title 
 archive:
