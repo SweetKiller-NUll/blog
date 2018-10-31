@@ -99,6 +99,34 @@ deploy:
   repo: git@47.99.188.127:/home/git/blog.git
   branch: master
 
+# Security
+## 加密博客
+## Docs: https://github.com/MikeCoder/hexo-blog-encrypt
+encrypt:
+  enable: false
+  default_abstract: 该文章已被加密，需要密码才能查看。</br>
+  default_message: 输入密码查看文章。
+  default_template:
+    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <div id="security">
+      <div class="input-container">
+        <input type="password" class="form-control" id="pass" placeholder=" {{message}} " />
+        <div class="bottom-line"></div>
+      </div>
+    </div>
+## Docs: https://github.com/hexojs/hexo-asset-pipeline
+asset_pipeline:
+  revisioning:
+    enable: true
+  clean_css:
+    enable: true
+  uglify_js:
+    enable: true
+  imagemin:
+    enable: true
+  html_minifier:
+    enable: true
+
 ############### 主题设置
 
 # Build settings
@@ -116,14 +144,18 @@ duoshuo_share: true                     # set to false if you want to use Commen
 use_livere:
 
 # Valine comment system https://valine.js.org
+
 valine: 
-  enable: false
-  appid:  #Leancloud应用的appId
-  appkey:  #Leancloud应用的appKey
-  verify: false #验证码
-  notify: false #评论回复提醒
-  avatar: mm #评论列表默认头像样式
-  placeholder: Just go go #评论框占位符
+  enable: true
+  appid: 0mRi20M7U7jDvThjXvGzCw6a-gzGzoHsz # Leancloud应用的appId
+  appkey: pFeoeR3lEgLtut5Hn2jKLpRG # Leancloud应用的appKey
+  verify: true #验证码
+  notify: true #评论回复提醒
+  avatar: 'mm' #评论列表默认头像样式
+  placeholder: 欢迎留言交流 #评论框占位符
+  guest_info: nick,mail,link
+  pageSize: 10,
+  meta: nick
 
 # Analytics settings
 # Baidu Analytics

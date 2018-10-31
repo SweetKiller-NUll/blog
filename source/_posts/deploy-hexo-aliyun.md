@@ -3,6 +3,7 @@ title: 在云服务器上自动部署并更新hexo
 date: 2018-10-30 20:14:36
 layout: post
 author: Knorien
+password: "mikemessi"
 cdn: header-on
 header-img: sw1080.png
 tags:
@@ -10,6 +11,11 @@ tags:
   - hexo
   - nginx
   - 阿里云
+categories: 教程
+keywords: 
+  - hexo
+  - nginx
+description: hexo自动部署阿里云
 ---
 # 本地环境
 > 本地开发环境为`macOS 14.0`，编辑器为`Visual Studio Code`，nodejs版本为v`10.12.0`。
