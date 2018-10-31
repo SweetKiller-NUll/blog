@@ -136,13 +136,13 @@ valine:
 featured-tags: true # whether or not using Feature-Tags
 featured-condition-size: 1 # A tag will be featured if the size of it is more than this condition value
 
-# friends
-friends: [
-	{
-		title: "Current",
-		href: "/"
-	}
-] 
+# friends 友链配置
+# friends: [
+	# {
+	# 	title: "Current",
+	# 	href: "/"
+	# }
+# ] 
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
