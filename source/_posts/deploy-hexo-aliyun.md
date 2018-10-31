@@ -90,8 +90,8 @@ $ vim /etc/nginx/nginx.conf
 英文输入法下按i进入编辑模式。
 ```nginx
 server {
-  server_name   _;            // 默认为_，也就是localhost或者127.0.0.1。
-  root          /DEPLOYPATH;  // 部署静态资源文件的目录，用绝对路径。建议部署在`/home`文件夹下，即`/home/**/deploy`，可以避免一些权限问题。
+  server_name   _;            # 默认为_，也就是localhost或者127.0.0.1。
+  root          /DEPLOYPATH;  # 部署静态资源文件的目录，用绝对路径。建议部署在`/home`文件夹下，即`/home/**/deploy`，可以避免一些权限问题。
 }
 ```
 **`注意：nginx的配置都需要以;结尾，不然启动的时候会报错或者出现一些其他的异常。`**
