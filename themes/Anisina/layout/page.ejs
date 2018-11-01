@@ -251,7 +251,7 @@ layout: layout
             <!-- Featured Tags  标签 -->
             <% if(config['featured-tags']) { %>
             <section>
-                <div class="tags">
+                <div class="tags slider-tags">
                     <% site.tags.map(function(tag){ %>
                     <% if(tag.length >= config['featured-condition-size']) { %>
                     <a href="<%= config.root %>tags/#<%= tag.name %>" title="<%= tag.name %>"
@@ -260,6 +260,17 @@ layout: layout
                     <% }) %>
                 </div>
             </section>
+            <style>
+                .slider-tags.tags {
+                    display: flex;
+                    flex: 1;
+                    flex-wrap: wrap;
+                }
+                .slider-tags.tags a {
+                    flex-grow: 1;
+                    object-fit: 1;
+                }
+            </style>
             <% } %>
 
             <% if(config.friends) { %>
