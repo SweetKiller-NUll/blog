@@ -18,7 +18,7 @@ keywords:
 description: hexo自动部署阿里云
 ---
 # 本地环境
-> 本地开发环境为`macOS 14.0`，编辑器为`Visual Studio Code`，nodejs版本为v`10.12.0`。
+> 本地开发环境为*`macOS Mojave v14.0`*，编辑器为*`Visual Studio Code v1.28.2`*，nodejs版本为*`v10.12.0`*。
 ## 一、准备工作
 ### 1、nodejs
 &emsp;&emsp;从[nodejs官网](https://nodejs.org/)下载安装。安装完成之后`node -v` `npm -v`查看nodejs以及npm是否安装成功和版本号。
@@ -154,5 +154,6 @@ git --work-tree=/DEPLOYPATH --git-dir=/home/git/blog.git checkout --force
 ```
 退出保存，然后执行`chmod +x ~/blog.git/hooks/post-receive`赋予文件可执行权限。
 至此，所有的配置都已完成，可以通过本地执行部署脚本将本地静态文件提交到云服务器的Git仓库，并通过钩子实现自动化的部署了。
+**😒这里坑死我了，因为一些权限和路径的问题，来回折腾的我都蒙圈了。**
 > **重点：主要就是注意部署目录的路径，Git仓库的路径问题。还有各种权限问题。所有的坑无非就是这两种，仔细查看错误信息，查阅网上资料，所有的问题都能够很好的得到解决。**
 > 纸上得来终觉浅，绝知此事要躬行。总要自己试试，才能够知道行不行。只要把坑都踩过一遍，才知道哪些坑是真的坑，哪些坑是自己粗心大意所致。

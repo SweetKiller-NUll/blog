@@ -130,7 +130,7 @@ asset_pipeline:
 ############### 主题设置
 
 # Build settings
-anchorjs: true # if you want to customize anchor. check out line:181 of `post.html`
+anchorjs: false # if you want to customize anchor. check out line:181 of `post.html`
 
 # Disqus settings 
 # disqus_username: 
