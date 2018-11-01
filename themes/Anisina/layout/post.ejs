@@ -15,19 +15,19 @@ layout: layout
      src="<%- page['header-img'] ? config['cdn-url'] + page["header-img"] : config["post-default-img"] %>">
 <% } %>
 <% } %>
+<% if (page["cdn"] === 'header-off'){%>
 <style>
-    <% if (page["cdn"] === 'header-off'){%>
-    header.intro-header {
-        background-image: url('<%= page["header-img"] || config["post-default-img"]%>');
-    }
-
-    <%} else {%>
-    header.intro-header {
-        background-image: url('<%- page["header-img"] ? ((config["cdn-url"]?config["cdn-url"]:"")+page["header-img"]+config["clip-content"]) : config["post-default-img"] %>')
-    }
-
-    <% } %>
+header.intro-header {
+    background-image: url('<%= page["header-img"] || config["post-default-img"]%>');
+}
 </style>
+<%} else {%>
+<style>
+header.intro-header {
+    background-image: url('<%- page["header-img"] ? ((config["cdn-url"]?config["cdn-url"]:"")+page["header-img"]+config["clip-content"]) : config["post-default-img"] %>')
+}
+</style>
+<% } %>
 
 <header class="intro-header">
     <div class="container">
@@ -69,33 +69,7 @@ layout: layout
             <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
                 <%- page.content %>
                 <hr>
-                <% if(config['duoshuo_share'] && config['duoshuo_username']) { %>
-                <!-- 多说 Share start -->
-                <div class="ds-share"
-                     style="text-align: right"
-                     data-thread-key="<%= page.path %>"
-                     data-title="<%= page.title %>"
-                     data-url="<%= page.permalink %>"
-                     data-images="<%= page["header-img"] ? page.permalink + page["header-img"] : '' %>"
-                     data-content="<%- truncate(strip_html(page.content), {
-                         length: 50,
-                         omission: '...'
-                     }) %> | <%= config.SEOTitle %> ">
-                    <div class="ds-share-inline">
-                        <ul class="ds-share-icons-16">
-                            <li data-toggle="ds-share-icons-more"><a class="ds-more" href="#">分享到：</a></li>
-                            <li><a class="ds-wechat flat" href="javascript:void(0);" data-service="wechat">微信</a></li>
-                            <li><a class="ds-weibo flat" href="javascript:void(0);" data-service="weibo">微博</a></li>
-                            <li><a class="ds-douban flat" href="javascript:void(0);" data-service="douban">豆瓣</a></li>
-                        </ul>
-                        <div class="ds-share-icons-more">
-                        </div>
-                    </div>
-                    <hr>
-                </div>
-                <!-- 多说 Share end-->
-                <% } %>
-
+                
                 <ul class="pager">
                     <% if (page.prev){ %>
                     <li class="previous">
@@ -111,18 +85,6 @@ layout: layout
                     <% } %>
                 </ul>
 
-                <% if(config['duoshuo_username']) { %>
-                <!-- 多说评论框 start -->
-                <div class="comment">
-                    <div class="ds-thread"
-                         data-thread-key="<%= page.path %>"
-                         data-title="<%= page.title %>"
-                         data-url="<%= page.permalink %>">
-                    </div>
-                </div>
-                <!-- 多说评论框 end -->
-                <% } %>
-
                 <% if(config['disqus_username']) { %>
                 <!-- disqus 评论框 start -->
                 <div class="comment">
@@ -130,29 +92,6 @@ layout: layout
                 </div>
                 <!-- disqus 评论框 end -->
                 <% } %>
-
-
-                <!--加入新的评论系统-->
-                <% if(config['use_livere']) {%>
-                <!-- 来必力City版安装代码 -->
-                <div id="lv-container" data-id="city" data-uid="<%= config['livere_uid'] %>">
-                    <script type="text/javascript">
-                        (function(d, s) {
-                            var j, e = d.getElementsByTagName(s)[0];
-
-                            if (typeof LivereTower === 'function') { return; }
-
-                            j = d.createElement(s);
-                            j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-                            j.async = true;
-
-                            e.parentNode.insertBefore(j, e);
-                        })(document, 'script');
-                    </script>
-                    <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
-                </div>
-                <!-- City版安装代码已完成 -->
-                <%}%>
 
                 <% if(config.valine && config.valine.enable) { %>
                     <!-- Valine -->
@@ -165,92 +104,32 @@ layout: layout
                         meta = meta.split(',').filter(function (item) {
                             return GUEST.indexOf(item)>-1;
                         });
-                        var notify = '<%= config.valine.notify %>' == true ? true : false;
-                        var verify = '<%= config.valine.verify %>' == true ? true : false;
                         new Valine({
                             el: '.vcomments',
-                            notify: notify,
-                            verify: verify,
                             app_id: "<%= config.valine.appid %>",
                             app_key: "<%= config.valine.appkey %>",
                             placeholder: "<%= config.valine.placeholder %>",
-                            avatar:"<%= config.valine.avatar %>",
-                            meta:meta,
+                            notify: "<%= config.valine.notify %>",
+                            verify: "<%= config.valine.verify %>",
+                            avatar: "<%= config.valine.avatar %>",
+                            meta: meta,
                             pageSize: "<%= config.valine.pageSize %>",
+                            visitor: "<%= config.valine.visitor %>",
+                            highlight: "<%= config.valine.highlight %>",
+                            avatarForce: true
                         });
                     </script>
                 <% } %>
-
             </div>
-
             <div class="hidden-xs col-sm-3 toc-col">
                 <div class="toc-wrap">
                     <%- toc(page.content, {list_number: false}) %>
                 </div>
             </div>
         </div>
-
-        <div class="row">
-            <!-- Sidebar Container -->
-
-            <!-- <div class=" -->
-                <!-- col-lg-8 col-lg-offset-2 -->
-                <!-- col-md-10 col-md-offset-1 -->
-                <!-- sidebar-container"> -->
-
-                <!-- Featured Tags -->
-                <!-- <% if(config['featured-tags']) { %> -->
-                <!-- <section> -->
-                    <!-- no hr -->
-                    <!-- <h5 class="text-center"> -->
-                        <!-- <a href="<%= config.root %>tags/">FEATURED TAGS</a> -->
-                    <!-- </h5> -->
-                    <!-- <div class="tags"> -->
-                        <!-- <% page.tags.forEach(function(tag){ %> -->
-                        <!-- <a class="tag" href="<%= config.root %>tags/#<%= tag.name %>" -->
-                           <!-- title="<%= tag.name %>"><%= tag.name %></a> -->
-                        <!-- <% }) %> -->
-                    <!-- </div> -->
-                <!-- </section> -->
-                <!-- <% } %> -->
-
-                <!-- Friends Blog -->
-                <!-- <% if(config.friends) { %> -->
-                <!-- <div style="margin-top: 20px;"> -->
-                    <!-- <h5 class="text-center">Links</h5> -->
-                    <!-- <ul class="list-inline text-center"> -->
-                        <!-- <% config.friends.forEach(function(friend){ %> -->
-                        <!-- <li><a href="<%= friend.href %>"><%= friend.title %></a></li> -->
-                        <!-- <% }); %> -->
-                    <!-- </ul> -->
-                <!-- </div> -->
-                <!-- <% } %> -->
-            <!-- </div> -->
-        </div>
-
     </div>
 </article>
 
-<% if(config['duoshuo_username']) { %>
-<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-<script type="text/javascript">
-    // dynamic User by Hux
-    var _user = '<%= config['duoshuo_username'] %>';
-
-    // duoshuo comment query.
-    var duoshuoQuery = {short_name: _user};
-    (function () {
-        var ds = document.createElement('script');
-        ds.type = 'text/javascript';
-        ds.async = true;
-        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-        ds.charset = 'UTF-8';
-        (document.getElementsByTagName('head')[0]
-        || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
-</script>
-<!-- 多说公共JS代码 end -->
-<% } %>
 <% if(config['disqus_username']) { %>
 <!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
@@ -269,6 +148,8 @@ layout: layout
 </script>
 <!-- disqus 公共JS代码 end -->
 <% } %>
+
+<!-- anchorjs -->
 <% if(config['anchorjs']) { %>
 <!-- async load function -->
 <script>
@@ -287,11 +168,11 @@ layout: layout
 </script>
 <!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
 <script>
-    async("http://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function () {
+    async("https://cdn.jsdelivr.net/npm/anchor-js@4.1.1/anchor.min.js", function () {
         anchors.options = {
-            visible: 'always',
+            visible: 'hover',
             placement: 'right',
-            icon: '#'
+            icon: '¶'
         };
         anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
     })

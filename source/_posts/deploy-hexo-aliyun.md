@@ -49,9 +49,9 @@ $ yarn add hexo-server -D
 ```yml
 deploy:
     type: git
-    repo: git@SERVER_IP:GIT_PATH        // <repository url>比如我的仓库地址为git@SERVER_IP:/home/git/blog.git
-    branch: master                      // 仓库分支
-    message: 提交的信息                   // commit的信息，可不填写。默认为 Site updated: {{ now('YYYY-MM-DD HH:mm:ss') }}
+    repo: git@SERVER_IP:GIT_PATH # <repository url>比如我的仓库地址为git@SERVER_IP:/home/git/blog.git
+    branch: master               # 仓库分支
+    message: 提交的信息            # commit的信息，可不填写。默认为 Site updated: {{ now('YYYY-MM-DD HH:mm:ss') }}
 ```
 **可以将脚本写进`package.json`中，这样就能通过我们开发的熟悉脚本`yarn dev`或`npm run dev`启动本地服务，执行`yarn build`或`npm run build`实现自动化部署。**
 ```json
@@ -104,10 +104,10 @@ server {
 **`注意：nginx的配置都需要以;结尾，不然启动的时候会报错或者出现一些其他的异常。`**
 &emsp;&emsp;如果输出的时候提示读写权限的问题可以给部署目录添加读写权限`chmod -R 777 /home/**/deploy`，部署路径和文件夹名自定。修改完配置之后按`ESC`退出编辑模式，`shift+:`进入命令行执行`:wq`保存退出操作。执行脚本`nginx`启动nginx服务器。
 ```bash
-$ nginx || systemctl start nginx && systemctl enable nginx            // 启动nginx服务
-$ nginx -s reload                                                     // 重启nginx服务
-$ nginx -s stop || systemctl stop nginx && systemctl disable nginx    // 停止nginx服务
-$ nginx -s quit                                                       // 退出nginx服务
+$ nginx || systemctl start nginx && systemctl enable nginx         # 启动nginx服务
+$ nginx -s reload                                                  # 重启nginx服务
+$ nginx -s stop || systemctl stop nginx && systemctl disable nginx # 停止nginx服务
+$ nginx -s quit                                                    # 退出nginx服务
 ```
 &emsp;&emsp;更多的nginx命令指令和操作可以查看[官方文档](https://nginx.org/en/docs/)。如果出现错误可以根据错误提示进行推测或者直接`Google/Baidu`搜索错误信息，一般都能找到错误原因和解决方法。
 &emsp;&emsp;验证nginx是否开启成功，可以在部署目录新建index.html文件，写点东西然后通过ip或者域名访问。nginx默认开启80端口，可以自行设置其他端口。如果云服务器没有开放代理端口的访问需要先开启端口访问权限，否则无法正常进行访问，具体可自行搜索。
