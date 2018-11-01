@@ -162,10 +162,10 @@ featured-condition-size: 1 # A tag will be featured if the size of it is more th
 
 # friends 友链配置
 # friends: [
-	# {
-	# 	title: "Current",
-	# 	href: "/"
-	# }
+# 	{
+# 		title: "Current",
+# 		href: "/"
+# 	}
 # ] 
 
 markdown:

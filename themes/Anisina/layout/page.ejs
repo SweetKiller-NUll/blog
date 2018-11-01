@@ -167,9 +167,9 @@ layout: layout
                     <% if(config['sidebar-about-description']) { %>
                     <p><%= config['sidebar-about-description'] %></p>
                     <% } %>
-                    <!-- <hr> -->
+                    <hr style="display: block;height: 1px;">
                     <!-- SNS Link 社交 -->
-                    <ul class="list-inline">
+                    <ul class="list-inline" style="margin-top: 10px;">
                         <% if (config.RSS) { %>
                         <li>
                             <a href="<%= config.root + ((config.links && config.links.feed) ? config.links.feed : 'feed.xml') %>">
@@ -246,6 +246,9 @@ layout: layout
                         <% } %>
                     </ul>
                 </div>
+                <% if(config['featured-tags']) { %>
+                    <hr style="display: block;height: 1px;">
+                <%}%>
             </section>
 
             <!-- Featured Tags  标签 -->
@@ -274,7 +277,6 @@ layout: layout
             <% } %>
 
             <% if(config.friends) { %>
-            <!-- <hr> -->
             <h5 style="text-align: center;">Links</h5>
             <ul class="list-inline" style="text-align: center;">
                 <% config.friends.forEach(function(friend){ %>
