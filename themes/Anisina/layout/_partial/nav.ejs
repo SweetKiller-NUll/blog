@@ -34,7 +34,7 @@
 					<% var about = false; %>
                     <% site.pages.forEach(function(page){ %>
                         <% if(page.title){ %>
-							<% if(page.title == "about") { %>
+							<% if(page.title.toLocaleLowerCase() == "about") { %>
 								<% about = true; %>
 							<% } else { %>
                         <li>
