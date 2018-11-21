@@ -92,6 +92,11 @@ pagination_dir: page
 ## Themes: https://hexo.io/themes/
 theme: Anisina
 
+# 添加备案号
+record:
+  uri: 'http://www.miitbeian.gov.cn/'
+  id: '浙ICP备18049552号'
+
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
