@@ -24,7 +24,7 @@ SEOTitle: Knorien's Blog
 email: zhangjinwei0320@hotmail.com
 description: Knorien
 keyword: Knorien
-favicon: http://pheo33nwl.bkt.clouddn.com/avatar.jpeg
+favicon: https://blog-1253057539.cos.ap-guangzhou.myqcloud.com/avatar.jpeg?imageMogr2/auto-orient/strip/interlace/1/quality/70/thumbnail/48x
 
 # SNS settings
 # 一些社交平台地址，支持以下几种：
@@ -104,20 +104,6 @@ deploy:
   repo: git@47.99.188.127:/home/git/blog.git
   branch: master
 
-# Security
-## 加密博客 Docs: https://github.com/MikeCoder/hexo-blog-encrypt
-encrypt:
-  enable: false
-  default_abstract: 该文章已被加密，需要密码才能查看。</br>
-  default_message: 输入密码查看文章。
-  default_template:
-    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
-    <div id="security">
-      <div class="input-container">
-        <input type="password" class="form-control" id="pass" placeholder=" {{message}} " />
-        <div class="bottom-line"></div>
-      </div>
-    </div>
 ## Docs: https://github.com/hexojs/hexo-asset-pipeline
 asset_pipeline:
   revisioning:
@@ -183,22 +169,22 @@ markdown:
     - markdown-it-emoji
 
 # img CDN path
-cdn-url: http://pheo33nwl.bkt.clouddn.com/ # 你的CDN地址
+cdn-url: https://blog-1253057539.cos.ap-guangzhou.myqcloud.com/ # 你的CDN地址
 # Qiniu imageView2 API
 # More info http://developer.qiniu.com/code/v6/api/kodo-api/image/imageview2.html
-clip-content: "?imageView2/4/w/1400/h/400/interlace/1/q/90"
-clip-avatar: "?imageView2/2/w/300/h/300/interlace/1/q/90"
+clip-content: "?imageMogr2/auto-orient/strip/interlace/1/quality/70"
+clip-avatar: "?imageMogr2/auto-orient/strip/interlace/1/quality/70"
 clip-post: "?" # you can custom post width and height
-clip-home-post-bg: "?imageView2/1/w/800/h/300/interlace/1/q/70"
+clip-home-post-bg: "?imageMogr2/auto-orient/strip/interlace/1/quality/70"
 # post default images
-post-default-img: http://pheo33nwl.bkt.clouddn.com/sw1080.png?imageView2/4/w/1400/h/400/interlace/1/q/90 # 博文默认的图片
-post-default-img-mobile: http://pheo33nwl.bkt.clouddn.com/sw1080.png?imageView2/4/w/750/h/600/interlace/1/q/90 # 移动端显示的图片
-header-img: http://pheo33nwl.bkt.clouddn.com/sw1080.png?imageView2/4/w/750/h/490/interlace/1/q/90 
+post-default-img: https://blog-1253057539.cos.ap-guangzhou.myqcloud.com/sw1080.png?imageMogr2/auto-orient/strip/interlace/1/quality/70 #http://pheo33nwl.bkt.clouddn.com/sw1080.png?imageView2/4/w/1400/h/400/interlace/1/q/90 # 博文默认的图片
+post-default-img-mobile: https://blog-1253057539.cos.ap-guangzhou.myqcloud.com/sw1080.png?imageMogr2/auto-orient/strip/interlace/1/quality/70 #http://pheo33nwl.bkt.clouddn.com/sw1080.png?imageView2/4/w/750/h/600/interlace/1/q/90 # 移动端显示的图片
+header-img: https://blog-1253057539.cos.ap-guangzhou.myqcloud.com/sw1080.png?imageMogr2/auto-orient/strip/interlace/1/quality/70 #http://pheo33nwl.bkt.clouddn.com/sw1080.png?imageView2/4/w/750/h/490/interlace/1/q/90 
 
 # Sidebar settings
 sidebar: true
 sidebar-about-description: 时光未央，岁月静好 # 个人描述
-sidebar-avatar: "http://pheo33nwl.bkt.clouddn.com/avatar.jpeg?imageView2/2/w/300/h/300/interlace/1/q/90"   # use absolute URL
+sidebar-avatar: "https://blog-1253057539.cos.ap-guangzhou.myqcloud.com/avatar.jpeg?imageMogr2/auto-orient/strip/interlace/1/quality/70"   # use absolute URL
 
 # archive page title 
 archive:
