@@ -17,7 +17,7 @@ description: caddy实现部署
 ---
 # 介绍
 > &emsp;&emsp;`caddy`是一个由`go`语言编写的是具有自动HTTPS的HTTP/2 Web服务器。功能与`nginx`和`Apache`类似，但具有更低的上手成本、更简洁的配置和自动`HTTPS`的便利性，不用自己手动或者用脚本去执行生成签名证书。
-> &emsp;&emsp;得益于`Let's Encrypt`开源项目的支持，`caddy`默认支持并自动启用`HTTPS`协议，使用`Let's Encrypt`签发的免费证书，并且默认启用`HTTP/2`传输。
+> &emsp;&emsp;得益于`Let's Encrypt`开源项目的支持，`caddy`默认支持并自动启用`HTTPS`协议，使用`Let's Encrypt`签发的免费证书，并且默认启用`HTTP/2`协议。
 # 特性
 > 官方介绍
 
