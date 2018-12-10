@@ -80,6 +80,48 @@
                     </li>
                 <% } %>
 
+                <% if (config.qq && config.qq.enable) { %>
+                    <li>
+                        <a target="_blank" href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=<%= config.qq.number %>&website=www.oicqzone.com">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-qq fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                <% } %>
+
+                <% if (config.weixin && config.weixin.enable) { %>
+                    <style>
+                        .list-inline .user-un-linked {
+                            position: relative;
+                        }
+
+                        .list-inline .user-un-linked img {
+                            position: absolute;
+                            top: -125px;
+                            left: -30px;
+                            width: 120px;
+                            z-index: 1000;
+                            box-shadow: 0 0 2px #000;
+                            display: none;
+                        }
+
+                        .list-inline .user-un-linked:hover img {
+                            display: block;
+                        }
+                    </style>
+                    <li class="user-un-linked">
+                        <a target="_blank" href="javascript: void(0);">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-weixin fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                        <img src="<%= config.weixin.qrcodeuri %>" alt="<%= config.weixin.profile %>">
+                    </li>
+                <% } %>
+
                 </ul>
                 <p class="copyright text-muted">
                     Copyright &copy; <%= config.title %> <%= new Date().getFullYear() %>

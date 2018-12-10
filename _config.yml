@@ -31,9 +31,16 @@ favicon: https://blog-1253057539.cos.ap-guangzhou.myqcloud.com/avatar.jpeg?image
 # weibo_username: 
 zhihu_username: Knorien
 github_username: KnorienChang
-twitter_username: KenveChang
+# twitter_username: KenveChang
 # facebook_username: 
 # linkedin_username: 
+qq:
+  enable: true
+  number: 1185477549
+weixin:
+  enable: true
+  qrcodeuri: 'https://blog-1253057539.cos.ap-guangzhou.myqcloud.com/mmqrcode1544435269039.png'
+  profile: 'KenveChang'
 
 # Directory
 source_dir: source

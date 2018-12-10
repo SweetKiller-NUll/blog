@@ -244,6 +244,48 @@ layout: layout
                             </a>
                         </li>
                         <% } %>
+
+                        <% if (config.qq && config.qq.enable) { %>
+                        <li>
+                            <a target="_blank" href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=<%= config.qq.number %>&website=www.oicqzone.com">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-qq fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <% } %>
+
+                        <% if (config.weixin && config.weixin.enable) { %>
+                        <style>
+                            .sidebar-container .short-about .user-un-linked {
+                                position: relative;
+                            }
+
+                            .sidebar-container .short-about .user-un-linked img {
+                                position: absolute;
+                                top: -105px;
+                                left: -30px;
+                                width: 100px;
+                                z-index: 1000;
+                                border-radius: 0;
+                                display: none;
+                            }
+
+                            .sidebar-container .short-about .user-un-linked:hover img {
+                                display: block;
+                            }
+                        </style>
+                        <li class="user-un-linked">
+                            <a target="_blank" href="javascript: void(0);">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-weixin fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                            <img src="<%= config.weixin.qrcodeuri %>" alt="<%= config.weixin.profile %>">
+                        </li>
+                        <% } %>
                     </ul>
                 </div>
                 <% if(config['featured-tags']) { %>
