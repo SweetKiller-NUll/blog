@@ -1,6 +1,6 @@
 ---
 title: 使用caddy部署静态站点和代理
-date: 2018-11-29 16：13：12
+date: 2018-11-29 16:13:12
 layout: post
 author: Knorien
 cdn: header-on
