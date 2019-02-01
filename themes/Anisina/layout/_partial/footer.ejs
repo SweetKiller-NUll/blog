@@ -118,7 +118,7 @@
                                 <i class="fa fa-weixin fa-stack-1x fa-inverse"></i>
                             </span>
                         </a>
-                        <img src="<%= config.weixin.qrcodeuri %>" alt="<%= config.weixin.profile %>">
+                        <img src="<%= config['cdn-url'] + config.weixin.qrcodeuri + config['clip-avatar'] %>" alt="<%= config.weixin.profile %>">
                     </li>
                 <% } %>
 
@@ -140,10 +140,10 @@
 </footer>
 
 <!-- jQuery -->
-<%- js('js/jquery.min.js') %>
+<%- js('https://unpkg.com/jquery@3.3.1/dist/jquery.min.js') %>
 
 <!-- Bootstrap Core JavaScript -->
-<%- js('js/bootstrap.min.js') %>
+<%- js('https://unpkg.com/bootstrap@3.3.2/dist/js/bootstrap.min.js') %>
 
 <!-- Custom Theme JavaScript -->
 <%- js('js/blog.js') %>
@@ -164,7 +164,7 @@
 <script>
     // only load tagcloud.js in tag.html
     if($('#tag_cloud').length !== 0){
-        async("<%= config.root%>js/jquery.tagcloud-b386909d9978dde4ad5382c16afda4f7.js",function(){
+        async("<%= config.root%>js/jquery.tagcloud.js",function(){
             $.fn.tagcloud.defaults = {
                 // size: {start: 1, end: 10, unit: 'em'},
                 color: {start: '#bbbbee', end: '#0085a1'},
@@ -176,7 +176,7 @@
 
 <!--fastClick.js -->
 <script>
-    async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+    async("https://unpkg.com/fastclick@1.0.6/lib/fastclick.js", function(){
         var $nav = document.querySelector("nav");
         if($nav) FastClick.attach($nav);
     })
@@ -214,7 +214,7 @@
 </script>
 <% } %>
 
-<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script async src="https://unpkg.com/busuanzi@2.3.0/bsz.pure.mini.js"></script>
 
 <!-- 背景粒子特效 -->
 <script>
@@ -222,14 +222,3 @@ if (screen && screen.width > 480) {
     document.write('<script async defer type="text/javascript" color="187,187,238" opacity="1" zIndex="-2" count="99" src="https://cdn.bootcss.com/canvas-nest.js/2.0.3/canvas-nest.js"><\/script>');
 }
 </script>
-
-<!-- <%- js('js/jquery.snow.js') %>
-<script>
-$(function(){
-    $.fn.snow({
-        minSize: 5,     //雪花的最小尺寸
-        maxSize: 40,    //雪花的最大尺寸
-        newOn: 400     //雪花出现的频率 这个数值越小雪花越多
-    });
-});
-</script> -->

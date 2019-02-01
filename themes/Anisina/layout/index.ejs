@@ -5,7 +5,7 @@ layout: page
 <% page.posts.each(function(post){ %>
 <% if (post["cdn"] === 'header-off') { %>
 <div class="post-preview  <%- post.layout === 'poetry' ? 'post-preview-poetry' : '' %>"
-     style="background-image: url('<%- post["header-img"] || config["post-default-img"] %>')">
+     style="background-image: url('<%- config["cdn-url"] + post["header-img"] + config["clip-content"] || config["cdn-url"] + config["post-default-img"] + config["clip-content"] %>')">
     <a href="<%- config.root %><%- post.path %>">
         <h2 class="post-title">
             <%- post.title || "未命名" %>
@@ -28,7 +28,7 @@ layout: page
 </div>
 <% } else { %>
 <div class="post-preview <%- post.layout === 'poetry' ? 'post-preview-poetry' : '' %>"
-     style="background-image: url('<%- post["header-img"] ? (config["cdn-url"]?config["cdn-url"]:"") + post["header-img"] : config["post-default-img-mobile"] %>')">
+     style="background-image: url('<%- post["header-img"] ? (config["cdn-url"] ? config["cdn-url"] : "") + post["header-img"] + config["clip-content"] : config["cdn-url"] + config["post-default-img-mobile"] + config["clip-content"] %>')">
     <a href="<%- config.root %><%- post.path %>">
         <h2 class="post-title">
             <%- post.title || "未命名" %>

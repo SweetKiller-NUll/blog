@@ -131,7 +131,7 @@ layout: layout
                 <div class="site-heading text-center">
                     <div class="about-me">
                         <!--移动端头部显示-->
-                        <img src="<%= config['sidebar-avatar'] %>"/>
+                        <img src="<%= config['cdn-url'] + config['sidebar-avatar'] + config['clip-avatar'] %>"/>
                         <h5><a href="<%= config.root %>about/"><%= config.author %></a></h5>
                         <p><%= config['sidebar-about-description'] %></p>
                     </div>
@@ -161,7 +161,7 @@ layout: layout
                 <div class="short-about">
                     <!--侧边栏头像-->
                     <% if(config['sidebar-avatar']) { %>
-                    <img src="<%= config['sidebar-avatar'] %>"/>
+                    <img src="<%= config['cdn-url'] + config['sidebar-avatar'] + config['clip-avatar'] %>"/>
                     <% } %>
                     <h5><a href="<%= config.root %>about/"><%= config.author %></a></h5>
                     <% if(config['sidebar-about-description']) { %>
@@ -283,7 +283,7 @@ layout: layout
                                     <i class="fa fa-weixin fa-stack-1x fa-inverse"></i>
                                 </span>
                             </a>
-                            <img src="<%= config.weixin.qrcodeuri %>" alt="<%= config.weixin.profile %>">
+                            <img src="<%= config['cdn-url'] + config.weixin.qrcodeuri + config['clip-avatar'] %>" alt="<%= config.weixin.profile %>">
                         </li>
                         <% } %>
                     </ul>
@@ -307,14 +307,15 @@ layout: layout
             </section>
             <style>
                 .slider-tags.tags {
-                    display: flex;
+                    text-align: left;
+                    /* display: flex;
                     flex: 1;
-                    flex-wrap: wrap;
+                    flex-wrap: wrap; */
                 }
-                .slider-tags.tags a {
+                /* .slider-tags.tags a {
                     flex-grow: 1;
                     object-fit: 1;
-                }
+                } */
             </style>
             <% } %>
 

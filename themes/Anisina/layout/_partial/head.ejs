@@ -8,10 +8,10 @@
     <meta name="msapplication-navbutton-color" content="#600090">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="#600090">
-    <link rel="shortcut icon" href="<%- config.favicon || 'https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-person-128.png' %>">
+    <link rel="shortcut icon" href="<%- config['cdn-url'] + config.favicon + config['clip-avatar'] || '' %>">
     <link rel="alternate" type="application/atom+xml" title="<%= config.title %>" href="/atom.xml">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
+    <link rel="stylesheet" href="https://unpkg.com/animate.css@3.7.0/animate.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/font-awesome@4.7.0/css/font-awesome.min.css">
     <title>
         <% if (page.title) { %>
         <%= page.title + '｜' + config.SEOTitle %>
@@ -23,7 +23,7 @@
     <link rel="canonical" href="<%= config.url + config.root + (page.path || '').replace('index.html', '') %>">
 
     <!-- Bootstrap Core CSS -->
-    <%- css('css/bootstrap.min.css') %>
+    <%- css('https://unpkg.com/bootstrap@3.3.2/dist/css/bootstrap.min.css') %>
 
     <!-- Custom CSS -->
     <%- css('css/blog-style.css') %>

@@ -13,9 +13,9 @@ timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: https://www.knorien.cn
 root: /
-permalink: :year/:month/:day/:title/
+permalink: :year/:month/:title/
 permalink_defaults:
 
 # Site settings
@@ -24,7 +24,7 @@ SEOTitle: Knorien's Blog
 email: zhangjinwei0320@hotmail.com
 description: Knorien
 keyword: Knorien
-favicon: https://blog-1253057539.cos.ap-guangzhou.myqcloud.com/avatar.jpeg?imageMogr2/auto-orient/strip/interlace/1/quality/70/thumbnail/48x
+favicon: avatar.jpeg
 
 # SNS settings
 # 一些社交平台地址，支持以下几种：
@@ -39,7 +39,7 @@ qq:
   number: 1185477549
 weixin:
   enable: true
-  qrcodeuri: 'https://blog-1253057539.cos.ap-guangzhou.myqcloud.com/mmqrcode1544435269039.png'
+  qrcodeuri: 'mmqrcode1544435269039.png'
   profile: 'KenveChang'
 
 # Directory
@@ -160,11 +160,11 @@ featured-condition-size: 1 # A tag will be featured if the size of it is more th
 
 # friends 友链配置
 # friends: [
-# 	{
-# 		title: "Current",
-# 		href: "/"
-# 	}
-# ] 
+#   {
+#     title: "Current",
+#     href: "/"
+#   }
+# ]
 
 markdown:
   plugins:
@@ -177,21 +177,19 @@ markdown:
 
 # img CDN path
 cdn-url: https://blog-1253057539.cos.ap-guangzhou.myqcloud.com/ # 你的CDN地址
-# Qiniu imageView2 API
-# More info http://developer.qiniu.com/code/v6/api/kodo-api/image/imageview2.html
 clip-content: "?imageMogr2/auto-orient/strip/interlace/1/quality/70"
 clip-avatar: "?imageMogr2/auto-orient/strip/interlace/1/quality/70"
-clip-post: "?" # you can custom post width and height
+clip-post: "?imageMogr2/auto-orient/strip/interlace/1/quality/70" # you can custom post width and height
 clip-home-post-bg: "?imageMogr2/auto-orient/strip/interlace/1/quality/70"
 # post default images
-post-default-img: https://blog-1253057539.cos.ap-guangzhou.myqcloud.com/sw1080.png?imageMogr2/auto-orient/strip/interlace/1/quality/70 #http://pheo33nwl.bkt.clouddn.com/sw1080.png?imageView2/4/w/1400/h/400/interlace/1/q/90 # 博文默认的图片
-post-default-img-mobile: https://blog-1253057539.cos.ap-guangzhou.myqcloud.com/sw1080.png?imageMogr2/auto-orient/strip/interlace/1/quality/70 #http://pheo33nwl.bkt.clouddn.com/sw1080.png?imageView2/4/w/750/h/600/interlace/1/q/90 # 移动端显示的图片
-header-img: https://blog-1253057539.cos.ap-guangzhou.myqcloud.com/sw1080.png?imageMogr2/auto-orient/strip/interlace/1/quality/70 #http://pheo33nwl.bkt.clouddn.com/sw1080.png?imageView2/4/w/750/h/490/interlace/1/q/90 
+post-default-img: sw1080.png
+post-default-img-mobile: sw1080.png
+header-img: sw1080.png
 
 # Sidebar settings
 sidebar: true
-sidebar-about-description: 时光未央，岁月静好 # 个人描述
-sidebar-avatar: "https://blog-1253057539.cos.ap-guangzhou.myqcloud.com/avatar.jpeg?imageMogr2/auto-orient/strip/interlace/1/quality/70"   # use absolute URL
+sidebar-about-description: 时光未央，岁月静好     # 个人描述
+sidebar-avatar: "avatar.jpeg"                  # use absolute URL
 
 # archive page title 
 archive:
