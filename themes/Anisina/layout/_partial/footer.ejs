@@ -82,7 +82,7 @@
 
                 <% if (config.qq && config.qq.enable) { %>
                     <li>
-                        <a target="_blank" href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=<%= config.qq.number %>&website=www.oicqzone.com">
+                        <a target="_blank" href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=<%= config.qq.number %>">
                             <span class="fa-stack fa-lg">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-qq fa-stack-1x fa-inverse"></i>
@@ -222,3 +222,14 @@ if (screen && screen.width > 480) {
     document.write('<script async defer type="text/javascript" color="187,187,238" opacity="1" zIndex="-2" count="99" src="https://cdn.bootcss.com/canvas-nest.js/2.0.3/canvas-nest.js"><\/script>');
 }
 </script>
+
+<!-- <%- js('js/jquery.snow.js') %>
+<script>
+$(function(){
+    $.fn.snow({
+        minSize: 5,     //雪花的最小尺寸
+        maxSize: 40,    //雪花的最大尺寸
+        newOn: 400     //雪花出现的频率 这个数值越小雪花越多
+    });
+});
+</script> -->
